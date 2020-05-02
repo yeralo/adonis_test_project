@@ -14,6 +14,7 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use('Route');
 
-Route.on('/').render('index')
+/* Usamos el controlador y llamamos a la funcion home dentro de ella */
+Route.get('/', 'JobController.home');
