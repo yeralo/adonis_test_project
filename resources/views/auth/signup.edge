@@ -12,7 +12,7 @@ Publicaciones - Crear cuenta
 @endsection
 
 @section('content')
-  <h1>Join now</h1>
+  <h1>Apuntate ahora</h1>
 
   <div class="job-container">
 
@@ -21,7 +21,7 @@ Publicaciones - Crear cuenta
         <!-- El campo csrField es para generar entrada oculta que asegure que la respuesta es desde nuestro servidor  -->
         {{ csrfField() }}
 
-        <label for="username">Username</label>
+        <label for="username">Nombre de usuario</label>
 
         <!-- Se utiliza funcion old() de adonis para mantener persistente los datos del formulario si un error aparece  -->
         <input type="text" name="username" value="{{ old('username', '') }}">
@@ -41,7 +41,7 @@ Publicaciones - Crear cuenta
             </span>
         @endif
 
-        <label for="password">Password</label>
+        <label for="password">Contraseña</label>
         <input type="password" name="password">
         @if(hasErrorFor('password'))
             <span>
@@ -49,7 +49,7 @@ Publicaciones - Crear cuenta
             </span>
         @endif
 
-        <button type="submit">Join now</button>
+        <button type="submit">Aceptar</button>
       </form>
   </div>
 @endsection
