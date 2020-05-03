@@ -16,5 +16,12 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route');
 
-/* Usamos el controlador y llamamos a la funcion home dentro de ella */
+/* Usamos la funcion home del controlador JobController en raiz */
 Route.get('/', 'JobController.home');
+
+/* Paginas de crear cuenta y logueo */
+Route.on('/signup').render('auth.signup');
+Route.on('/login').render('auth.login');
+
+/* Usamos la funcion create del controlador UserController en crear cuenta y validamos formulario */
+Route.post('/signup', 'UserController.create').validator('CreateUser');
