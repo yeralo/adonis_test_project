@@ -8,8 +8,8 @@ class JobController {
     async home({view}) {
         const job = new Job;
         job.title = 'My job title';
-        job.title = 'https://www.google.es';
-        job.title = 'My job description';
+        job.link = 'https://www.google.es';
+        job.description = 'My job description';
         
         await job.save();
 
